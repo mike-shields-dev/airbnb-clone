@@ -1,13 +1,16 @@
 "use client";
 
+import { useState } from "react";
+
 import { AiOutlineMenu } from "react-icons/ai";
 import Avatar from "../Avatar";
 
 const UserMenu = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleOpen = () => setIsOpen(!isOpen);
+
   return (
-    <div
-      className="relative"
-    >
+    <div className="relative">
       <div
         className="
           flex
@@ -16,7 +19,7 @@ const UserMenu = () => {
           gap-3
         "
       >
-        <div 
+        <div
           className="
             hidden
             md:block
@@ -33,7 +36,7 @@ const UserMenu = () => {
         >
           Airbnb your home
         </div>
-        <div 
+        <div
           className="
             p-4
             md:py-1
@@ -48,7 +51,7 @@ const UserMenu = () => {
             hover:shadow-md
             transition
           "
-          onClick={() => {}}
+          onClick={toggleOpen}
         >
           <AiOutlineMenu />
           <div className="hidden md:block">
@@ -56,6 +59,23 @@ const UserMenu = () => {
           </div>
         </div>
       </div>
+      {isOpen && (
+        <div
+          className="
+            absolute
+            rounded-xl
+            shadow-md
+            w-[40vw]
+            md:w-3/4
+            bg-white
+            overflow-hidden
+            right-0
+            top-12
+            text-sm
+          "
+        >
+        </div>
+      )}
     </div>
   );
 };
