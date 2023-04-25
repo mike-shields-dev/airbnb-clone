@@ -23,6 +23,7 @@ export default function RootLayout({
           <Modal 
             isOpen 
             title="Title"
+            actionLabel='Submit'
             body={<div>Body</div>} 
           />
           <Navbar />
