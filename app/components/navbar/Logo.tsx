@@ -6,6 +6,7 @@ const Logo = () => {
   const router = useRouter();
   return (
     <Image
+      priority
       src="/images/airbnb.svg"
       alt="Logo"
       className="hidden md:block cursor-pointer"
