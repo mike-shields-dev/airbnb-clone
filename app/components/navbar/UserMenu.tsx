@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import { AiOutlineMenu } from "react-icons/ai";
 import Avatar from "../Avatar";
+import MenuItem from "./MenuItem";
 
 const UserMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -74,6 +75,17 @@ const UserMenu = () => {
             text-sm
           "
         >
+          <div
+            className="
+              flex
+              flex-col
+              cursor-pointer
+            "
+          >
+            <>
+              <MenuItem onClick={() => {}} label="login" />
+            </>
+          </div>
         </div>
       )}
     </div>
